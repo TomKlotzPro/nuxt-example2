@@ -15,7 +15,6 @@ export default class Helper {
 
         try {
             await writeFile(path, json)
-            console.log('Saved data to file.')
         } catch (error) {
             console.error(error)
         }
