@@ -17,21 +17,21 @@
   {
     "id": 4,
     "description": "Do the exercise 4",
-    "finished": false
+    "finished": true
   },
   {
     "id": 5,
     "description": "Do the exercise 5",
-    "finished": false
+    "finished": true
   },
   {
     "id": 6,
     "description": "Do the exercise 6",
-    "finished": false
+    "finished": true
   },
   {
     "id": 7,
     "description": "Finish the exercise",
-    "finished": false
+    "finished": true
   }
 ]
