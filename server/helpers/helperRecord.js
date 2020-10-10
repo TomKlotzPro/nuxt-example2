@@ -26,7 +26,7 @@ export default class HelperRecord {
         for (var i = 0; i < records.length; i++) {
             if (records[i] === record) {
                 // Delete record
-                delete records.splice(i, 1)
+                records.splice(i, 1)
                 // Save Data
                 Helper.writeToFile(todosFile, records)
                 return
@@ -44,11 +44,13 @@ export default class HelperRecord {
     static updateRecord(record, description = null, finished = null, records) {
         for (var i = 0; i < records.length; i++) {
             if (records[i] === record) {
+                console.log(finished)
                 // If description or finished is not null update field else return null
                 if (description !== null && records[i].description !== description) records[i].description = description
-                else if (finished !== null && records[i].finished !== (finished === 'true') ) records[i].finished = (finished === 'true')
+                else if (finished !== null && records[i].finished !== finished) records[i].finished = finished
                 else return null
 
+                console.log("record save")
                 // Save records
                 Helper.writeToFile(todosFile, records)
                 return records[i]

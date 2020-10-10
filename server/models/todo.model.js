@@ -57,7 +57,7 @@ export default class Todo {
         if (deletedRecord === null) return null
 
         // Retrieve todos without delete record
-        HelperRecord.deleteRecord(record, records)
+        HelperRecord.deleteRecord(deletedRecord, records)
 
         // Return deleted records
         return deletedRecord

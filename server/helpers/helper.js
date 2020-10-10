@@ -4,7 +4,7 @@ import { promisify } from 'util'
 const writeFile = promisify(fs.writeFile)
 
 export default class Helper {
-    
+
     /**
      * @param {String} path
      * @param {Array} data
@@ -27,7 +27,14 @@ export default class Helper {
      * @returns {Int}
      */
     static getNewId(data) {
-        var lastObject = parseInt(JSON.stringify(data[data.length - 1]['id'], null, 2))
+        try {
+            var lastObject = parseInt(JSON.stringify(data[data.length - 1]['id'], null, 2))
+        } catch {
+            console.log("Empty database")
+        } finally {
+            var lastObject = 0
+        }
+
         return lastObject + 1
     }
 }
