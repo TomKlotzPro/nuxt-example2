@@ -6,7 +6,7 @@ import { expect } from 'chai'
 import request from 'supertest'
 import express from 'express'
 import session from 'express-session'
-import apiRouter from '../../../routes/routes.js'
+import apiRouter from '../../../../routes/routes.js'
 const writeFile = promisify(fs.writeFile)
 const todosFile = path.join(__dirname, '../../../data/todos.json')
 
