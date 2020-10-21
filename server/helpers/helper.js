@@ -28,9 +28,9 @@ export default class Helper {
     static getNewId(data) {
         try {
             var lastObject = parseInt(JSON.stringify(data[data.length - 1]['id'], null, 2))
+            console.log(lastObject)
         } catch {
             console.log("Empty database")
-        } finally {
             var lastObject = 0
         }
 

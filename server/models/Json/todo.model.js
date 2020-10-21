@@ -1,10 +1,10 @@
 import fs from 'fs'
 import path from 'path'
 import { promisify } from 'util'
-import HelperRecord from '../helpers/helperRecord.js'
+import HelperRecord from '../../helpers/helperRecord.js'
 
 const readFile = promisify(fs.readFile)
-const todosFile = path.join(__dirname, '../data/todos.json')
+const todosFile = path.join(__dirname, '../../data/todos.json')
 
 export default class Todo {
     /** @type {Number} */
@@ -65,8 +65,8 @@ export default class Todo {
 
     /**
     * @param {String} id
-    * @param {String} description
-    * @param {Boolean} finished
+    * @param {String} [description=null]
+    * @param {Boolean} [finished=null]
     * @returns {Promise<Todo>}
     */
     static async update(id, description = null, finished = null) {
@@ -88,5 +88,4 @@ export default class Todo {
         // Return updated record
         return updatedRecord
     }
-
 }
